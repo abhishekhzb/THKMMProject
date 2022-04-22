@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="4dp"
+    android:padding="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_article"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:background="@color/colorGrayLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Avatar"
+        android:importantForAutofill="auto"/>
+
+    <ImageView
+        android:id="@+id/premium_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="@+id/image_article"
+        app:layout_constraintTop_toTopOf="@+id/image_article"
+        app:srcCompat="@android:drawable/ic_menu_compass" />
+
+    <TextView
+        android:id="@+id/textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:ems="9"
+        app:layout_constraintStart_toEndOf="@+id/image_article"
+        app:layout_constraintTop_toTopOf="@id/image_article"
+        android:text="This elevation attribu attribute only workte attribute only workattribute only work only work in API level"
+        />
+
+    <TextView
+        android:id="@+id/live_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="2dp"
+        android:drawableStart="@android:drawable/presence_invisible"
+        app:layout_constraintStart_toEndOf="@+id/image_article"
+        app:layout_constraintBottom_toTopOf="@id/section_textview"
+        android:text=" Live"
+        android:textColor="@color/colorRed"
+        />
+
+    <TextView
+        android:id="@+id/section_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/image_article"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="National . 1min ago"
+        />
+
+    <ImageView
+        android:id="@+id/image_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toEndOf="@id/section_textview"
+        app:layout_constraintTop_toTopOf="@id/section_textview"
+        app:layout_constraintBottom_toBottomOf="@id/section_textview"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:drawable/ic_menu_share"
+        />
+
+    <ImageView
+        android:id="@+id/image_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toEndOf="@id/image_share"
+        app:layout_constraintTop_toTopOf="@id/section_textview"
+        app:layout_constraintBottom_toBottomOf="@id/section_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="5dp"
+        android:background="@android:drawable/ic_menu_save"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

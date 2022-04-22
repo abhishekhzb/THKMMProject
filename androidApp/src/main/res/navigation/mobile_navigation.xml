@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ns.thkmmproject.android.home_screens.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_briefing"
+        android:name="ns.thkmmproject.android.home_screens.briefing.BriefingFragment"
+        android:label="@string/title_briefing"
+        tools:layout="@layout/fragment_briefing" />
+
+    <fragment
+        android:id="@+id/navigation_trending"
+        android:name="ns.thkmmproject.android.home_screens.trending.TrendingFragment"
+        android:label="@string/title_trending"
+        tools:layout="@layout/fragment_trending" />
+
+    <fragment
+        android:id="@+id/navigation_premium"
+        android:name="ns.thkmmproject.android.home_screens.premium.PremiumFragment"
+        android:label="@string/title_premium"
+        tools:layout="@layout/fragment_premium" />
+
+    <fragment
+        android:id="@+id/navigation_more"
+        android:name="ns.thkmmproject.android.home_screens.more.MoreFragment"
+        android:label="@string/title_more"
+        tools:layout="@layout/fragment_more" />
+
+</navigation>

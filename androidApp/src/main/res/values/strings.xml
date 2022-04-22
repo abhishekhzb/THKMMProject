@@ -1,0 +1,24 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_briefing">Briefing</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_premium">Premium</string>
+    <string name="title_more">More</string>
+
+    <string name="app_name">TabActivity</string>
+
+    <string name="tab_text_1">Cricket</string>
+    <string name="tab_text_2">Tennis</string>
+    <string name="tab_text_3">Football</string>
+    <string name="tab_text_4">Hockey</string>
+
+    <string name="tab_text_5">Home</string>
+    <string name="tab_text_6">National</string>
+    <string name="tab_text_7">Covid</string>
+    <string name="tab_text_8">Sports</string>
+    <string name="tab_text_9">Science</string>
+    <string name="tab_text_10">Multimedia</string>
+</resources>
