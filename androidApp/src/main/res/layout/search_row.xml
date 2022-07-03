@@ -13,8 +13,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:drawableStart="@android:drawable/ic_menu_search"
-        android:drawableEnd="@android:drawable/ic_media_play"
+        android:drawableStart="@drawable/ic_search"
+        android:fontFamily="@font/firasans_regular"
+        android:drawableEnd="@android:drawable/ic_btn_speak_now"
         android:inputType="text"
         android:hint=" Search for articles"
         android:importantForAutofill="no" />

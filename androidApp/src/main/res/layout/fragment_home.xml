@@ -10,12 +10,10 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="34dp"
-
         app:tabTextColor="@color/black_light6"
         app:tabIndicatorColor="@color/black"
         app:tabSelectedTextColor="@color/black"
         app:tabTextAppearance="@style/CustomTextStyle"
-
         app:layout_constraintTop_toTopOf="parent"
         app:tabMode="scrollable" />
 

@@ -10,7 +10,7 @@ import com.ns.thehindu.android.Data
 import ns.thkmmproject.android.R
 
 
-class FragmentViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+class SubsectionViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
 
 
     fun bind(item: Data, context: Context) {

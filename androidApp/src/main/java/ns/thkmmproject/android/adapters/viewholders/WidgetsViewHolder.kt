@@ -8,15 +8,17 @@ import com.ns.thehindu.android.Data
 import com.ns.thehindu.android.DataWidgets
  import com.squareup.picasso.Picasso
 import ns.thkmmproject.android.R
+import ns.thkmmproject.model.ArticleItem
+import ns.thkmmproject.model.ArticleItemWidgets
 
 class WidgetsViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
 
     val imageView = itemView.findViewById<ImageView>(R.id.imageview_article)
     val textView = itemView.findViewById<TextView>(R.id.textview_title)
 
-    fun bind(mList: DataWidgets) {
-        Picasso.get().load(mList.image).placeholder(R.drawable.transparent_black).into(imageView)
-        textView.text = mList.textData
+    fun bind(mList: ArticleItemWidgets) {
+        Picasso.get().load(mList.img_url).placeholder(R.drawable.transparent_black).into(imageView)
+        textView.text = mList.title
     }
 
 }

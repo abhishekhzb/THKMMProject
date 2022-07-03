@@ -2,9 +2,7 @@ package ns.thkmmproject.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import ns.thkmmproject.Greeting
-import android.widget.TextView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -14,7 +12,6 @@ import ns.thkmmproject.android.databinding.ActivityMainBinding
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.launch
 
 fun greet(): String {
     return Greeting().greeting()
@@ -32,21 +29,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
-
-
-        //ktor
-      //  val tv: TextView = findViewById(R.id.text_view)
-       // tv.text = "Loading..."
-        mainScope.launch {
-            kotlin.runCatching {
-                Greeting().getHtml()
-            }.onSuccess {
-              //  tv.text = it
-                Log.e("RESPONSE",""+it)
-            }.onFailure {
-               // tv.text = "Error: ${it.localizedMessage}"
-            }
-        }
 
        // Bottom Navigation Code //************************************************************
         val navView: BottomNavigationView = binding.appBarMain.contentMain.navView

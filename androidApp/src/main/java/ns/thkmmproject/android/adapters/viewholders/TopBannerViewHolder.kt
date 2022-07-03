@@ -7,13 +7,26 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ns.thehindu.android.Data
 import com.squareup.picasso.Picasso
 import ns.thkmmproject.android.R
+import ns.thkmmproject.model.ArticleItem
 
 class TopBannerViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-    val imageView = itemView.findViewById<ImageView>(R.id.imageview_banner)
+    val imageView = itemView.findViewById<ImageView>(R.id.image_article)
     val textView = itemView.findViewById<TextView>(R.id.textview_title)
+    val premium_imageview = itemView.findViewById<ImageView>(R.id.premium_imageview)
+    //val section_textview = itemView.findViewById<TextView>(R.id.section_textview)
 
-    fun bind(mList: Data) {
-        Picasso.get().load(mList.image).placeholder(R.drawable.transparent_black).into(imageView)
-        textView.text = mList.textData
+    fun bind(mList: ArticleItem) {
+        if(mList.img_url!=""){
+            Picasso.get().load(mList.img_url).error(R.drawable.bg_layout)
+                .placeholder(R.drawable.transparent_black).into(imageView)
+        }
+        textView.text = mList.title
+      //  section_textview.text = mList.section
+
+        if (mList.premium.equals("0")) {
+            premium_imageview.visibility = View.GONE
+        } else {
+            premium_imageview.visibility = View.VISIBLE
+        }
     }
 }

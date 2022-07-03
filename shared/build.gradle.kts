@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+    id ("kotlinx-serialization")
 }
 
 version = "1.0"
@@ -27,6 +28,12 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-gson:$ktorVersion")
+                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+                implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+                implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
             }
         }
         val commonTest by getting {
@@ -37,6 +44,9 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-gson:$ktorVersion")
+                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
             }
         }
         val androidTest by getting
